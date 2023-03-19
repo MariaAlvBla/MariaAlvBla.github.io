@@ -10,8 +10,7 @@ We have included several versions of the same files, to ensure that some of them
 
 | File name  | Use|
 | ------------- |:-------------:|
-| code_figures_Datathon_Report.R| Code for replicating the figures in R Studio|
-| Dataset_Datathon.xlsx| Data characterizing the sequences collected during the Datathon (including it's metadata)|
+| code_figures_Datathon_Report.R| Code for replicating the figures using R Studio|
 | Dataset_Datathon.csv| Data characterizing the sequences collected during the Datathon|
 | Dataset_Datathon.txt| Data characterizing the sequences collected during the Datathon|
 | Dataset_Datathon_metadata.txt| Metadata for the Dataset_Datathon|
