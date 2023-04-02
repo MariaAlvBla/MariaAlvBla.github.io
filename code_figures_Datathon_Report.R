@@ -14,7 +14,7 @@ setwd("name of working directory")
 #by Stephanie Jurburg
 
 #Read the data file
-read.table("bibliometrix/Output.txt")
+Output<-read.table("Output.txt", sep="\t", header=TRUE, fill=TRUE)
 Output$WB.Classification=as.factor(Output$WB.Classification)
 
 #Set the WB$Classification levels
@@ -38,7 +38,7 @@ theme_set(
 )
 
 #Read the data file
-EMP_coverage_by_WB_income <- read_excel("C:/Users/jurburg/Nextcloud/Cloud/In Progress/V4Database/Datathon/bibliometrix/EMP coverage by WB income.xlsx")
+EMP_coverage_by_WB_income<-read.table("EMP_coverage_by_WB_income.txt", sep="\t", header=TRUE, fill=TRUE)
 
 #Set the world map
 world=map_data("world")
@@ -145,7 +145,7 @@ for_map=read.csv("Dataset_Datathon.csv")
 
 #Create freq table of BioProject rows (BioSamples) per site
 freq_coord_bioproj <- for_map %>% 
-  group_by(BioProject,latitude,longitud, geo_loc_name, env_broad_scale) %>%   # grouping, drag country names into this, you will use inner join on country names later on
+  group_by(BioProject,latitude,longitude, geo_loc_name_country, env_broad_scale) %>%   # grouping, drag country names into this, you will use inner join on country names later on
   tally()
 
 #Set the column names
@@ -179,24 +179,3 @@ ggplot() +
   lims(x = c(-80, -40), y = c(-65, -20))+
   theme_minimal()+
   scale_color_viridis(discrete=TRUE)
-
-# Compute the centroid as the mean longitude and latitude
-# Used as label coordinate for country's names
-datathon_countries = datathon_countries %>%
-  group_by(region) %>%
-  summarise(long = mean(long), lat = mean(lat))
-
-countries=inner_join(world, Counts, by = "region")
-  
-counts<-for_map %>%
-  group_by(latitute,longitud,BioProject) %>%
-  tally()
-
-#visualize the data points
-ggplot(datathon_countries, aes(x = long, y = lat))+
-  geom_point(data = counts, aes(longitud, latitute, color = BioProject, size=n), alpha = 1) +
-  geom_polygon(aes( group = group, fill = region))+
-  geom_text(aes(label = region), data = region.lab.data,  size = 3, hjust = 0.5)+
-  scale_fill_viridis_d()+
-  theme_void()+
-  theme(legend.position = "none")

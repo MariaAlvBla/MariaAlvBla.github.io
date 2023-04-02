@@ -1,0 +1,13 @@
+"This metadata corresponds to the file "EMP coverage by WB income", used to create figure 1b in the associated publication.
+This information was obtained and adapted from Thompson LR, Sanders JG, McDonald D, Amir A, Ladau J, Locey KJ, et al.
+A communal catalogue reveals Earth’s multiscale microbial diversity. Nature. 2017;551: 457–463. doi:10.1038/nature24621."		
+	
+-region: Name of the country
+	
+-City.Region: Name of the city or region	
+
+-Latitude: Latitude of the location where the biological sample was collected in the Decimal degree (DD) format given by Google Maps. Google Maps uses the World Geodetic System WGS84 standard, which has the coordinate origin of WGS 84. More information on https://developers.google.com/maps/documentation/javascript/coordinates. Decimal degrees (DD) format which doesn’t specify the cardinal points. The first number corresponds to latitude and the second to longitude. E.g. 41.40338, 2.17403. 
+
+-Longitude: Longitude of the location where the biological sample was collected in the Decimal degree (DD) format given by Google Maps. Google Maps uses the World Geodetic System WGS84 standard, which has the coordinate origin of WGS 84. More information on https://developers.google.com/maps/documentation/javascript/coordinates. Decimal degrees (DD) format which doesn’t specify the cardinal points. The first number corresponds to latitude and the second to longitude. E.g. 41.40338, 2.17403. 
+
+-income: Classification of the country according to the 2021 World Bank income groups	

@@ -1,0 +1,16 @@
+This metadata corresponds to the file "Output.txt", used to create figure 1a in the associated publication.
+This information was obtained by systematically searching the ecology journals for articles which mentioned meta analyses using Web of Science
+(https://www.webofscience.com/wos/woscc/summary/12e1c250-be93-484a-968d-c51b098356a2-773967cb/relevance/1),
+
+ The affiliations of all authors in each manuscript was counted as an authorship in that country,
+and each country was classified according to the 2021 World Bank income groups.
+
+-Country: Name of the country to which authorsips belong
+
+-Authorships: Number of affiliations related to a specific country
+
+-Percentage: Number of authorships per country as a percentage of the total number of authorships
+
+-RD.investments:??
+
+-WB.Classification: Classification of the country according to the 2021 World Bank income groups
